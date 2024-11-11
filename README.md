@@ -1,7 +1,14 @@
 # NestWorth
-#Predict home price using some features
-#This repository contains the source code for a NestWorth website. The stack includes Flask for the backend, Bootstrap/CSS for styling for frontend.
-#This is my project structure
+
+**Predict home prices using key property features**
+
+This repository contains the source code for the NestWorth website. The tech stack includes:
+- **Flask** for the backend
+- **Bootstrap/CSS** for frontend styling
+
+## Project Structure
+
+```plaintext
 home-pricing-project/
 ├── backend/                   # Backend project (Flask)
 │   ├── app.py                 # Main application file
@@ -36,5 +43,3 @@ home-pricing-project/
 │   └── predict.py             # Prediction script for estimating prices
 │
 └── README.md                  # Project documentation
-
- 
