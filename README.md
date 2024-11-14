@@ -4,42 +4,29 @@
 
 This repository contains the source code for the NestWorth website. The tech stack includes:
 - **Flask** for the backend
-- **Bootstrap/CSS** for frontend styling
+- **React** for frontend styling
 
 ## Project Structure
 
 ```plaintext
-home-pricing-project/
-├── backend/                   # Backend project (Flask)
-│   ├── app.py                 # Main application file
-│   ├── config.py              # Configuration file (e.g., database settings)
-│   ├── models/                # Folder for database models
-│   │   └── property.py        # Property model (size, location, bedrooms)
-│   ├── views/                 # Views to handle requests and responses
-│   │   └── estimate.py        # Endpoint for estimating home prices
-│   ├── utils/                 # Utility functions for backend
-│   │   └── calculations.py    # Calculations and logic for price estimation
-│   ├── serializers/           # Serializers for API responses
-│   │   └── property_serializer.py  # Serializer for property data
-│   ├── tasks/                 # Asynchronous tasks (e.g., ML predictions)
-│   │   └── prediction_task.py # Task for processing model predictions
-│   ├── static/                # Static files (CSS, JS, images)
-│   ├── templates/             # HTML templates for Flask views
-│   │   ├── index.html         # Home page with property input form
-│   │   └── results.html       # Page displaying estimated price
-│   ├── .env                   # Environment variables (e.g., API keys, secrets)
-│   └── requirements.txt       # Project dependencies
+NestWorth/
+├── frontend/                   # React frontend
+│   ├── public/                 # Static files
+│   ├── src/
+│   │   ├── components/         # Reusable UI components (e.g., Header, PropertyForm)
+│   │   ├── pages/              # Main pages (e.g., HomePage, ResultsPage)
+│   │   ├── App.js              # Main App component
+│   │   ├── index.js            # Entry point
+│   ├── package.json            # React dependencies and scripts
 │
-├── frontend/                  # Frontend assets (HTML/CSS/JavaScript)
-│   ├── css/
-│   │   └── main.css           # Custom styles
-│   ├── js/
-│   │   └── main.js            # Custom JavaScript files
-│   └── index.html             # Frontend entry point
+├── backend/                    # Flask backend
+│   ├── app/
+│   │   ├── __init__.py         # Initialize Flask app
+│   │   ├── routes.py           # Define API endpoints
+│   │   ├── models.py           # Define any data models (if needed)
+│   ├── config.py               # Flask configuration (e.g., for database or API settings)
+│   ├── requirements.txt        # Python dependencies
+│   ├── run.py                  # Run the Flask server
 │
-├── ml_model/                  # Folder for machine learning model
-│   ├── model.pkl              # Serialized machine learning model
-│   ├── preprocess.py          # Data preprocessing for model input
-│   └── predict.py             # Prediction script for estimating prices
-│
-└── README.md                  # Project documentation
+├── README.md                   # Project documentation
+
