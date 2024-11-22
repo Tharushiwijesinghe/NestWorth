@@ -5,12 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="839b9cae-bb1d-4694-964c-261563697cc3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/assests/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/components/contact.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/components/estimate.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/components/hero.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/components/navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/components/services.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/components/testominals.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nw-/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +52,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/tharu/My Projects/f/Travel-Agency&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/tharu/My Projects/NestWorth&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,6 +83,12 @@
       <option name="presentableId" value="Default" />
       <updated>1731634722146</updated>
       <workItem from="1731634723092" duration="8915000" />
+      <workItem from="1732269624942" duration="254000" />
+      <workItem from="1732270991535" duration="26000" />
+      <workItem from="1732271045139" duration="68000" />
+      <workItem from="1732271827508" duration="909000" />
+      <workItem from="1732273516893" duration="4735000" />
+      <workItem from="1732280902021" duration="484000" />
     </task>
     <servers />
   </component>
