@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  color: #000000;
+  color: #ffffff;
   background-color: #ffffff;
 }
 
@@ -53,17 +53,74 @@ body {
   background-color:#f4a261;
   transform: translateX(-50%);
 }
+/*sign in*/
+/* Center the content */
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+/* Styling the box container */
+.box {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(51, 51, 51);
+  text-align: center;
+  background:linear-gradient(rgb(51, 51, 51), rgb(244, 162, 97));
+}
+
+/* Styling the form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #f4a261;
+}
+
+.title{
+  margin-bottom: -5px;
+}
+
+
 /* Header section */
 .hero_area {
   height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative; /* To position the pseudo-element */
-  background-image: linear-gradient(rgb(51, 51, 51), rgb(244, 162, 97)), url('../images/p1.jpg');
+  background-image: linear-gradient(rgb(51, 51, 51), rgb(244, 162, 97)), url(../images/pic1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  transition: background-image 0.5s ease-in-out;
 }
 
 
@@ -148,7 +205,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/);
+  /*background-image: url(../images/);*/
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -183,7 +240,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../images/menu.pn);
+  /*background-image: url(../images/menu.pn);*/
   background-size: 55px;
 }
 
@@ -305,7 +362,7 @@ a:focus {
 }
 
 .heathy_section {
-  background-image: url(../images/healthy-bg.jpg);
+  /*background-image: url(../images/healthy-bg.jpg);*/
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
@@ -443,15 +500,15 @@ a:focus {
 }
 
 .info_items .item .img-box.box-1 {
-  background-image: url(../images/location-white.png);
+  /*background-image: url(../images/location-white.png);*/
 }
 
 .info_items .item .img-box.box-2 {
-  background-image: url(../images/telephone-white.png);
+  /*background-image: url(../images/telephone-white.png);*/
 }
 
 .info_items .item .img-box.box-3 {
-  background-image: url(../images/envelope-white.png);
+  /*background-image: url(../images/envelope-white.png);*/
 }
 
 /* footer section*/

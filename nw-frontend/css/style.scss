@@ -87,7 +87,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(../images/p1.jpg);
+  background-image: url(../images/pic1.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -180,7 +180,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  //background-image: url(../images/search-icon.png);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -216,7 +216,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../images/menu.png);
+  //background-image: url(../images/menu.png);
   background-size: 55px;
 }
 
@@ -305,7 +305,7 @@ a:focus {
 // us section
 
 .us_section {
-  background-image: url(../images/us-bg.jpg);
+  //background-image: url(../images/us-bg.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: $white;
@@ -346,7 +346,7 @@ a:focus {
 // heathy section
 
 .heathy_section {
-  background-image: url(../images/healthy-bg.jpg);
+  //background-image: url(../images/healthy-bg.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: $white;
@@ -548,15 +548,15 @@ a:focus {
   .item {
     .img-box {
       &.box-1 {
-        background-image: url(../images/location-white.png);
+        //background-image: url(../images/location-white.png);
       }
 
       &.box-2 {
-        background-image: url(../images/telephone-white.png);
+        //background-image: url(../images/telephone-white.png);
       }
 
       &.box-3 {
-        background-image: url(../images/envelope-white.png);
+        //background-image: url(../images/envelope-white.png);
       }
     }
   }
