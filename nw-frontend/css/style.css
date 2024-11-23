@@ -117,10 +117,11 @@ button[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   position: relative; /* To position the pseudo-element */
-  background-image: linear-gradient(rgb(51, 51, 51), rgb(244, 162, 97)), url(../images/pic1.jpg);
+  background-image: linear-gradient(rgb(51, 51, 51), rgb(244, 162, 97)), url(../images/p2.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  z-index: 1;
 }
 
 
@@ -327,7 +328,8 @@ a:focus {
 }
 
 .us_section {
-  background-image: linear-gradient(rgb(244, 162, 97), rgba(0, 0, 0, 0.8)), url('https://www.vecteezy.com/photo/36338652-ai-generated-hand-holding-illuminated-miniature-house-at-sunset');
+  background-image: linear-gradient(rgb(68, 65, 64), rgba(14, 14, 14, 0.1)), url('../images/p3.jpg');
+  /*background-image: url('../images/p3.jpg');*/
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
@@ -401,7 +403,7 @@ a:focus {
 
 .contact_section {
   position: relative;
-  background-color: #2a9d8f;
+  background: linear-gradient(rgb(51, 51, 51), rgb(17, 7, 7));
   color: #ffffff;
 }
 
@@ -454,7 +456,7 @@ a:focus {
   outline: none;
   border: none;
   color: #ffffff;
-  background: #ff2953;
+  background: #f4a261;
   margin: 45px 0 0 auto;
   text-transform: uppercase;
 }
@@ -529,105 +531,4 @@ a:focus {
 }
 
 /* end footer section*/
-/*# sourceMappingURL=style.css.map */
 
-
-
-
-/*!* General styling for main *!*/
-/*main {*/
-/*  !* background-image: url(../images/f3.jpg); *!*/
-/*  background-size: cover;*/
-/*  background-position: center;*/
-/*  padding: 20px;*/
-/*  color: #ffffff;*/
-/*  border-radius: 10px;*/
-/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);*/
-/*  !* Adds a subtle shadow for emphasis *!*/
-/*}*/
-/*  !* FAQ Section *!*/
-/*  !* Target the FAQ section tabs *!*/
-/*  #faqTabs .nav-link {*/
-/*    color: #ff2953; !* Default text color *!*/
-/*  }*/
-
-/*  !* Change color to red for the active and hover states *!*/
-/*  #faqTabs .nav-link.active,*/
-/*  #faqTabs .nav-link:hover {*/
-/*    color: #ff2953; !* Red color *!*/
-/*    font-weight: bold;*/
-/*  }*/
-
-/*  .faq_section {*/
-/*    padding: 50px 20px;*/
-/*    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url('../images/f8-transformed.jpeg');*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    background-attachment: fixed;*/
-/*    color: #ffffff;*/
-/*    text-align: center;*/
-/*  }*/
-/*  .faq_section h1 {*/
-/*    font-size: 3rem;*/
-/*    text-transform: uppercase;*/
-/*    margin-bottom: 150px;*/
-/*    font-weight: bold;*/
-/*    color: #ff2953;*/
-/*    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);*/
-/*  }*/
-
-/*  .fnav-item{*/
-/*    margin-top: 40px;*/
-/*    margin-right: 90px;*/
-/*    color: #ff2953;*/
-/*    font-weight: bold;*/
-/*  }*/
-/*  .faq_section article {*/
-/*    margin: 20px auto;*/
-/*    max-width: 800px;*/
-/*    background-color: rgba(255, 255, 255, 0.9);*/
-/*    padding: 20px;*/
-/*    border-radius: 10px;*/
-/*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
-/*  }*/
-/*  .faq_section article h3 {*/
-/*    font-size: 2rem;*/
-/*    margin-bottom: 90px;*/
-/*    font-weight: bold;*/
-/*  }*/
-/*  .faq_section article p {*/
-/*    font-size: 1.5rem;*/
-/*    color: #555;*/
-/*    margin: 90px;*/
-/*  }*/
-/*  .faq_section article a {*/
-/*    color: #ff2953;*/
-/*    text-decoration: none;*/
-/*    font-weight: bold;*/
-/*  }*/
-/*  .faq_section article a:hover {*/
-/*    text-decoration: underline;*/
-/*  }*/
-/*  .fp{*/
-/*    color: navajowhite;*/
-/*    font-size: 20px;*/
-/*    margin-bottom: 10px;*/
-/*  }*/
-/*  !* Styling for the answer box *!*/
-/*  .fanswer-box {*/
-/*    background-color: #f4f4f4; !* Light gray background *!*/
-/*    border-radius: 5px; !* Rounded corners *!*/
-/*    padding: 15px; !* Padding around the text *!*/
-/*    margin-top: 10px; !* Space between the question and the answer *!*/
-/*    color: black; !* Set the text color to black *!*/
-/*  }*/
-
-/*  !* Optional: Add some styling for the links inside the answers *!*/
-/*  .fanswer-box a {*/
-/*    color: #007bff; !* Bootstrap link color *!*/
-/*    text-decoration: none;*/
-/*  }*/
-
-/*  .fanswer-box a:hover {*/
-/*    text-decoration: underline; !* Underline links on hover *!*/
-/*}*/
