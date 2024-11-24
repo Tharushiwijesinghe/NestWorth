@@ -82,10 +82,58 @@
       <div class="row">
       </div>
     </div>
+
+    <main >
+      <div >
+        <label for="answers">Location:</label>
+        <select id="answers" name="answers">
+          <option value="answer1">Near by city</option>
+          <option value="answer2">In village</option>
+        </select>
+        <br><br>
+        <div class="area">
+          <label for="answers">Size of the Land:</label>
+
+          <div class="form-group">
+            <label for="length">Length (in meters):</label>
+            <input type="number" id="length" placeholder="Enter length" oninput="calculateArea()">
+          </div>
+          <div class="form-group">
+            <label for="width">Width (in meters):</label>
+            <input type="number" id="width" placeholder="Enter width" oninput="calculateArea()">
+          </div>
+          <div class="form-group">
+            <label>Area:</label>
+            <div class="output" id="area">0 m²</div>
+          </div>
+          <div class="form-group">
+            <label for="width">Select Amenities:</label>
+            <label for="bwidth">No of bedrooms:</label>
+            <input type="number" id="bwidth" placeholder="" oninput="calculateArea()">
+          </div>
+          <label for="width">Others:</label>
+          <div class="container" style="background-color: midnightblue" >
+            <div class="camenities-list">
+              <label><input type="checkbox" id="pool" value="Swimming Pool"> Swimming Pool</label>
+              <label><input type="checkbox" id="garden" value="Garden"> Garden</label>
+              <label><input type="checkbox" id="garage" value="Garage"> Garage</label>
+              <label><input type="checkbox" id="playground" value="Playground"> Playground</label>
+            </div>
+          </dive>
+
+
+          </div>
+        </div>
+
+<!--      </div>-->
+    </main>
   </div>
 </section>
 
 <!-- end us section -->
+<!-- faq section -->
+
+<!-- end faq section -->
 
 <!-- info section -->
 <section class="info_section layout_padding2">
@@ -147,6 +195,12 @@
 <script>
   // Set the current year dynamically
   document.getElementById("currentYear").textContent = new Date().getFullYear();
+  function calculateArea() {
+    const length = document.getElementById('length').value;
+    const width = document.getElementById('width').value;
+    const area = length && width ? length * width : 0;
+    document.getElementById('area').textContent = `${area} m²`;
+  }
 </script>
 </body>
 
