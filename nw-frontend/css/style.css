@@ -623,7 +623,7 @@ main {
 
 /* Optional: Add some styling for the links inside the answers */
 .fanswer-box a {
-  color: #007bff; /* Bootstrap link color */
+  color: #697386; /* Bootstrap link color */
   text-decoration: none;
 }
 
@@ -644,7 +644,7 @@ select {
 }
 
 select:focus {
-  border-color: #007BFF; /* Highlight border on focus */
+  border-color: #b08764; /* Highlight border on focus */
   outline: none; /* Remove outline */
 }
 .form-group {
@@ -666,5 +666,5 @@ input, select {
 .output {
   font-weight: bold;
   font-size: 18px;
-  color: #007BFF;
+  color: #e37f2e;
 }
