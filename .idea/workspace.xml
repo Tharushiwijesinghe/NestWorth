@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="839b9cae-bb1d-4694-964c-261563697cc3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/estimate.html" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/estimate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1732460827597" duration="3733000" />
       <workItem from="1732549988164" duration="35000" />
       <workItem from="1732550145100" duration="1629000" />
-      <workItem from="1732551864648" duration="2523000" />
+      <workItem from="1732551864648" duration="2865000" />
     </task>
     <servers />
   </component>
