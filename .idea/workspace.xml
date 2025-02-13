@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="839b9cae-bb1d-4694-964c-261563697cc3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/nw-backend/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NestWorth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NestWorth.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/css/tempCodeRunnerFile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/css/tempCodeRunnerFile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/estimate.html" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/estimate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nw-frontend/testimonials.html" beforeDir="false" afterPath="$PROJECT_DIR$/nw-frontend/testimonials.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,32 +32,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.estimate.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.login.html.executor": "Run",
-    "JavaScript Debug.register.html.executor": "Run",
-    "JavaScript Debug.testimonials.html.executor": "Run",
-    "JavaScript Debug.value.html.executor": "Run",
-    "Node.js.App.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/tharu/My Projects/nest-final/NestWorth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.estimate.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.testimonials.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.value.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/tharu/My Projects/HPN/NestWorth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -117,6 +110,7 @@
       <workItem from="1738813406710" duration="1489000" />
       <workItem from="1738882517495" duration="13000" />
       <workItem from="1738882538987" duration="5476000" />
+      <workItem from="1739435893732" duration="6000" />
     </task>
     <servers />
   </component>
