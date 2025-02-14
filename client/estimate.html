@@ -87,8 +87,7 @@
       <div >
         <label for="answers">Location:</label>
         <select id="answers" name="answers">
-          <option value="answer1">Near by city</option>
-          <option value="answer2">In village</option>
+          <option value="answer1">Choose a location</option>
         </select>
         <br><br>
         <div class="area">
@@ -195,12 +194,42 @@
 <script>
   // Set the current year dynamically
   document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  //set area
   function calculateArea() {
     const length = document.getElementById('length').value;
     const width = document.getElementById('width').value;
     const area = length && width ? length * width : 0;
     document.getElementById('area').textContent = `${area} m²`;
   }
+
+  //set location
+  function onPageLoad() {
+    console.log("Document loaded, fetching locations...");
+    var url = "http://127.0.0.1:5000/get_location_names";
+
+    $.get(url, function (data, status) {
+      console.log("Received data:", data);
+      if (data && data.location_names) {  // Corrected key
+        var locationSelect = document.getElementById("answers");
+        $('#answers').empty(); // Clear existing options
+
+        // Add a default option
+        var defaultOption = new Option("Choose a location", "");
+        locationSelect.appendChild(defaultOption);
+
+        // Populate locations
+        data.location_names.forEach(location => {
+          var opt = new Option(location, location);
+          locationSelect.appendChild(opt);
+        });
+      }
+    }).fail(function () {
+      console.error("Failed to load locations. Check server.");
+    });
+  }
+  window.onload = onPageLoad;
+
 </script>
 </body>
 
