@@ -107,16 +107,20 @@
           </div>
           <div class="form-group">
             <label for="width">Select Amenities:</label>
-            <label for="bwidth">No of bedrooms:</label>
+            <label for="bwidth" >No of bedrooms:</label>
             <input type="number" id="bwidth" placeholder="" oninput="calculateArea()">
             <label for="bawidth">No of bathrooms:</label>
             <input type="number" id="bawidth" placeholder="" oninput="calculateArea()">
           </div>
           <div class="d-flex">
             <a href="value.html">
-              <button style="background-color: var(--primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;">
+<!--              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice">-->
+<!--                Estimate Value-->
+<!--              </button>-->
+              <button class="submit" style="background-color: var(--primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice()">
                 Estimate Value
               </button>
+
             </a>
           </div>
 
@@ -202,6 +206,92 @@
     const area = length && width ? length * width : 0;
     document.getElementById('area').textContent = `${area} m²`;
   }
+  function getBathValue() {
+    var bathInput = document.getElementById("bawidth").value;
+    return bathInput ? parseInt(bathInput) : 0;
+  }
+
+  function getBedroomValue() {
+    var bedInput = document.getElementById("bwidth").value;
+    return bedInput ? parseInt(bedInput) : 0;
+  }
+
+
+  // //get number of bathrooms
+  // function getBathValue(){
+  //   var bwidth = document.getElementById("bwidth");
+  //   for (var i in bwidth){
+  //     if(bwidth[i] - checked){
+  //       return parseInt(i) + 1;
+  //     }
+  //   }
+  //   return -1;
+  // }
+  //
+  // //get number of bedrooms
+  // function getBedroomValue(){
+  //   var bawidth = document.getElementById("bawidth");
+  //   for (var i in bawidth){
+  //     if(bawidth[i] - checked){
+  //       return parseInt(i) + 1;
+  //     }
+  //   }
+  //   return -1;
+  // }
+
+  //Estimate value
+  // function onClickedEstimatePrice(){
+  //   console.log("Estimate price buttin clicked");
+  //   var sqft = document.getElementById("area");
+  //   var Bedroom = getBedroomValue();
+  //   var bathrooms = getBathValue();
+  //   var location = document.getElementById("answers");
+  //   var estPrice = document.getElementById("uiestimatedPrice");
+  //
+  //   var url =  "http://127.0.0.1:5000/predict";
+  //
+  //   $.post(url,{
+  //     total_sqft: parseFloat(sqft.value),
+  //     Bedroom : Bedroom,
+  //     bath : bathrooms,
+  //     location: location.value
+  //   },function (data,status){
+  //     console.log(data.estimated_price);
+  //     estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + "Lakh</h2>";
+  //     console.log(status)
+  //   })
+  //
+  // }
+  function onClickedEstimatePrice() {
+    console.log("Estimate price button clicked");
+
+    var sqft = document.getElementById("area").textContent.replace(" m²", "").trim();
+    var Bedroom = getBedroomValue();
+    var bathrooms = getBathValue();
+    var location = document.getElementById("answers").value;
+    var estPrice = document.getElementById("uiestimatedPrice");
+
+    if (!location) {
+      alert("Please select a location");
+      return;
+    }
+
+    var url = "http://127.0.0.1:5000/predict";
+
+    $.post(url, {
+      total_sqft: parseFloat(sqft),
+      Bedroom: Bedroom,
+      bath: bathrooms,
+      location: location
+    }, function (data, status) {
+      console.log(data.estimated_price);
+      estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + " Lakh</h2>";
+      console.log(status);
+    }).fail(function () {
+      console.error("Error: Could not retrieve estimated price.");
+    });
+  }
+
 
   //set location
   function onPageLoad() {
