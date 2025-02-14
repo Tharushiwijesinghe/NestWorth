@@ -28,12 +28,17 @@ def get_location_names():
 
 @app.route("/predict_home_price", methods=['POST'])
 def predict_home_price():
+    print("Received request:", request.json)  # Debugging line
     try:
-        # Use JSON format for the request
         data = request.get_json()
+        print("Parsed data:", data)  # Debugging line
+
+        if not data:
+            return jsonify({'error': 'No data received'}), 400
+
         total_sqft = float(data['total_sqft'])
         location = data['location']
-        Bedroom = int(data['Bedroom'])  # Ensure this is an integer
+        Bedroom = int(data['Bedroom'])
         bath = int(data['bath'])
 
         response = jsonify({
@@ -43,7 +48,9 @@ def predict_home_price():
         return response
 
     except Exception as e:
-        return jsonify({'error': str(e)}), 400  # Return error response if something goes wrong
+        print("Error:", str(e))  # Debugging line
+        return jsonify({'error': str(e)}), 400
+
 
 
 if __name__ == "__main__":
