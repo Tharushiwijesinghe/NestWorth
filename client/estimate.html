@@ -113,15 +113,15 @@
             <input type="number" id="bawidth" placeholder="" oninput="calculateArea()">
           </div>
           <div class="d-flex">
-            <a href="value.html">
-<!--              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice">-->
+<!--            <a href="value.html">-->
+<!--&lt;!&ndash;              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice">&ndash;&gt;-->
+<!--&lt;!&ndash;                Estimate Value&ndash;&gt;-->
+<!--&lt;!&ndash;              </button>&ndash;&gt;-->
+<!--              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice()">-->
 <!--                Estimate Value-->
 <!--              </button>-->
-              <button class="submit" style="background-color: var(--primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice()">
-                Estimate Value
-              </button>
-
-            </a>
+<!--            </a>-->
+              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;"  onclick="onClickedEstimatePrice()">Estimate Value</button>
           </div>
 
 
@@ -262,6 +262,38 @@
   //   })
   //
   // }
+  // function onClickedEstimatePrice() {
+  //   console.log("Estimate price button clicked");
+  //
+  //   var sqft = document.getElementById("area").textContent.replace(" m²", "").trim();
+  //   var Bedroom = getBedroomValue();
+  //   var bathrooms = getBathValue();
+  //   var location = document.getElementById("answers").value;
+  //   var estPrice = document.getElementById("uiestimatedPrice");
+  //
+  //   if (!location) {
+  //     alert("Please select a location");
+  //     return;
+  //   }
+  //
+  //   var url = "http://127.0.0.1:5000/predict";
+  //
+  //   $.post(url, {
+  //     total_sqft: parseFloat(sqft),
+  //     Bedroom: Bedroom,
+  //     bath: bathrooms,
+  //     location: location
+  //   }, function (data, status) {
+  //     console.log(data.estimated_price);
+  //     estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + " Lakh</h2>";
+  //     console.log(status);
+  //   }).fail(function () {
+  //     console.error("Error: Could not retrieve estimated price.");
+  //   });
+  //
+  //   window.location.href = "value.html";
+  // }
+
   function onClickedEstimatePrice() {
     console.log("Estimate price button clicked");
 
@@ -269,7 +301,6 @@
     var Bedroom = getBedroomValue();
     var bathrooms = getBathValue();
     var location = document.getElementById("answers").value;
-    var estPrice = document.getElementById("uiestimatedPrice");
 
     if (!location) {
       alert("Please select a location");
@@ -285,12 +316,17 @@
       location: location
     }, function (data, status) {
       console.log(data.estimated_price);
-      estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + " Lakh</h2>";
-      console.log(status);
+
+      // Store estimated price in localStorage
+      localStorage.setItem("estimated_price", data.estimated_price);
+
+      // Redirect after storing data
+      window.location.href = "value.html";
     }).fail(function () {
       console.error("Error: Could not retrieve estimated price.");
     });
   }
+
 
 
   //set location

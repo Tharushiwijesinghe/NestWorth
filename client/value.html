@@ -166,6 +166,14 @@
         const width = document.getElementById('width').value;
         const area = length && width ? length * width : 0;
         document.getElementById('area').textContent = `${area} m²`;
+
+        window.onload = function () {
+            var price = localStorage.getItem("estimated_price");
+            if (price) {
+                document.getElementById("uiestimatedPrice").innerHTML = "<h2>" + price + " Lakh</h2>";
+            }
+        };
+
     }
 </script>
 </body>
