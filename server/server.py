@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 from artifacts import util
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/get_location_names")
@@ -13,22 +15,8 @@ def get_location_names():
     return response
 
 
-
-# @app.route("/predict_home_price", methods=['POST'])
-# def predict_home_price():
-#     total_sqft = float(request.form['total_sqft'])
-#     location = request.form['location']
-#     Bedroom = request.form['Bedroom']
-#     bath = int(request.form['bath'])
-#
-#     response = jsonify({
-#         'estimated_price': util.get_estimated_price(location, total_sqft, Bedroom, bath)
-#     })
-#     response.headers.add('Access-Control-Allow-Origin', '*')
-#     return response
-
-@app.route('/predict', methods=['POST'])
-def predict():
+@app.route('/predicted_home_price', methods=['POST'])
+def predicted_home_price():
     try:
         data = request.get_json()
         print("Received data:", data)  # Debugging line

@@ -77,15 +77,62 @@
       </div>
     </div>
 
-    <main >
-      <div >
+<!--    <main >-->
+<!--      <div >-->
+<!--        <label for="answers">Location:</label>-->
+<!--        <select id="answers" name="answers">-->
+<!--          <option value="answer1">Choose a location</option>-->
+<!--        </select>-->
+<!--        <br><br>-->
+<!--        <div class="area">-->
+<!--          <label for="answers">Size of the Land:</label>-->
+
+<!--          <div class="form-group">-->
+<!--            <label for="length">Length (in meters):</label>-->
+<!--            <input type="number" id="length" placeholder="Enter length" oninput="calculateArea()">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="width">Width (in meters):</label>-->
+<!--            <input type="number" id="width" placeholder="Enter width" oninput="calculateArea()">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label>Area:</label>-->
+<!--            <div class="output" id="area">0 m²</div>-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="width">Select Amenities:</label>-->
+<!--            <label for="bwidth" >No of bedrooms:</label>-->
+<!--            <input type="number" id="bwidth" placeholder="" oninput="calculateArea()">-->
+<!--            <label for="bawidth">No of bathrooms:</label>-->
+<!--            <input type="number" id="bawidth" placeholder="" oninput="calculateArea()">-->
+<!--          </div>-->
+<!--          <div class="d-flex">-->
+<!--              <button class="submit"   onclick="onClickedEstimatePrice()">Estimate Value</button>-->
+<!--          </div>-->
+
+<!--              <div id="uiEstimatedPrice" class="result"><h2>-</h2></div>-->
+
+
+
+<!--        </div>-->
+<!--        </div>-->
+
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </main>-->
+
+    <main>
+      <div>
         <label for="answers">Location:</label>
         <select id="answers" name="answers">
-          <option value="answer1">Choose a location</option>
+          <option value="">Choose a location</option> <!-- Default empty option -->
+          <option value="city1">City 1</option>
+          <option value="city2">City 2</option>
+          <option value="city3">City 3</option>
         </select>
         <br><br>
+
         <div class="area">
-          <label for="answers">Size of the Land:</label>
+          <label for="length">Size of the Land:</label>
 
           <div class="form-group">
             <label for="length">Length (in meters):</label>
@@ -99,31 +146,24 @@
             <label>Area:</label>
             <div class="output" id="area">0 m²</div>
           </div>
+
           <div class="form-group">
-            <label for="width">Select Amenities:</label>
-            <label for="bwidth" >No of bedrooms:</label>
-            <input type="number" id="bwidth" placeholder="" oninput="calculateArea()">
-            <label for="bawidth">No of bathrooms:</label>
-            <input type="number" id="bawidth" placeholder="" oninput="calculateArea()">
+            <label for="bedrooms">No of bedrooms:</label>
+            <input type="number" id="bedrooms" placeholder="Enter number of bedrooms">
+
+            <label for="bathrooms">No of bathrooms:</label>
+            <input type="number" id="bathrooms" placeholder="Enter number of bathrooms">
           </div>
+
           <div class="d-flex">
-              <button class="submit" style="background-color: #f4a261 ; border: none; color: white; padding: 10px 20px; cursor: pointer;"  onclick="onClickedEstimatePrice()">Estimate Value</button>
+            <button class="submit" onclick="onClickedEstimatePrice()">Estimate Value</button>
           </div>
 
-          <div class="us_container ">
-            <div class="form-group">
-              <label>Estimated Price:</label>
-              <div id="uiestimatedPrice"><h2>-</h2></div>
-            </div>
-
-          </div>
-
-
+          <div id="uiEstimatedPrice" class="result"><h2>-</h2></div>
         </div>
-        </div>
-
-<!--      </div>-->
+      </div>
     </main>
+
   </div>
 </section>
 

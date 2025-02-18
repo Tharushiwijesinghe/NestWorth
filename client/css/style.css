@@ -401,72 +401,6 @@ a:focus {
   color: #000000;
 }
 
-/*.contact_section {*/
-/*  position: relative;*/
-/*  background: linear-gradient(rgb(51, 51, 51), rgb(17, 7, 7));*/
-/*  color: #ffffff;*/
-/*}*/
-
-/*.contact_section .heading_container {*/
-/*  justify-content: start;*/
-/*}*/
-
-/*.contact_section .heading_container h2::before {*/
-/*  text-align: left;*/
-/*  left: 0;*/
-/*  transform: none;*/
-/*}*/
-
-/*.contact_section .row {*/
-/*  align-items: center;*/
-/*}*/
-
-/*.contact_section .img-box img {*/
-/*  width: 100%;*/
-/*}*/
-
-
-/*testiminols*/
-/*.testimonials_section {*/
-/*  background:linear-gradient(rgb(16, 14, 14), rgb(255, 255, 255));*/
-/*}*/
-
-
-/*.contact_section .form_container {*/
-/*  padding: 45px 0 45px 15px;*/
-/*}*/
-
-/*.contact_section input {*/
-/*  width: 100%;*/
-/*  border: none;*/
-/*  background-color: #ffffff;*/
-/*  outline: none;*/
-/*  color: #000000;*/
-/*  margin-top: 25px;*/
-/*  padding: 12px;*/
-/*}*/
-
-/*.contact_section input::-moz-placeholder {*/
-/*  color: #2a2a2c;*/
-/*}*/
-
-/*.contact_section input::placeholder {*/
-/*  color: #2a2a2c;*/
-/*}*/
-
-/*.contact_section input.message-box {*/
-/*  padding: 45px 12px;*/
-/*}*/
-
-/*.contact_section button {*/
-/*  padding: 10px 65px;*/
-/*  outline: none;*/
-/*  border: none;*/
-/*  color: #ffffff;*/
-/*  background: #f4a261;*/
-/*  margin: 45px 0 0 auto;*/
-/*  text-transform: uppercase;*/
-/*}*/
 
 .info_section {
   background-color: #252233;
@@ -703,3 +637,12 @@ input, select {
   gap: 15px; /* Adds space between elements in the .area section */
 }
 
+.submit{
+  background-color: #f4a261 ;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
