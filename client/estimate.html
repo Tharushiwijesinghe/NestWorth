@@ -54,12 +54,6 @@
               <li class="nav-item active">
                 <a class="nav-link" href="estimate.html"> Estimation</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="testimonials.html">Testimonials </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html"> Contact Us</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -113,15 +107,15 @@
             <input type="number" id="bawidth" placeholder="" oninput="calculateArea()">
           </div>
           <div class="d-flex">
-<!--            <a href="value.html">-->
-<!--&lt;!&ndash;              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice">&ndash;&gt;-->
-<!--&lt;!&ndash;                Estimate Value&ndash;&gt;-->
-<!--&lt;!&ndash;              </button>&ndash;&gt;-->
-<!--              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;" onclick="onClickedEstimatePrice()">-->
-<!--                Estimate Value-->
-<!--              </button>-->
-<!--            </a>-->
-              <button class="submit" style="background-color: var(&#45;&#45;primary1); border: none; color: white; padding: 10px 20px; cursor: pointer;"  onclick="onClickedEstimatePrice()">Estimate Value</button>
+              <button class="submit" style="background-color: #f4a261 ; border: none; color: white; padding: 10px 20px; cursor: pointer;"  onclick="onClickedEstimatePrice()">Estimate Value</button>
+          </div>
+
+          <div class="us_container ">
+            <div class="form-group">
+              <label>Estimated Price:</label>
+              <div id="uiestimatedPrice"><h2>-</h2></div>
+            </div>
+
           </div>
 
 
@@ -217,51 +211,8 @@
   }
 
 
-  // //get number of bathrooms
-  // function getBathValue(){
-  //   var bwidth = document.getElementById("bwidth");
-  //   for (var i in bwidth){
-  //     if(bwidth[i] - checked){
-  //       return parseInt(i) + 1;
-  //     }
-  //   }
-  //   return -1;
-  // }
-  //
-  // //get number of bedrooms
-  // function getBedroomValue(){
-  //   var bawidth = document.getElementById("bawidth");
-  //   for (var i in bawidth){
-  //     if(bawidth[i] - checked){
-  //       return parseInt(i) + 1;
-  //     }
-  //   }
-  //   return -1;
-  // }
+//predict price
 
-  //Estimate value
-  // function onClickedEstimatePrice(){
-  //   console.log("Estimate price buttin clicked");
-  //   var sqft = document.getElementById("area");
-  //   var Bedroom = getBedroomValue();
-  //   var bathrooms = getBathValue();
-  //   var location = document.getElementById("answers");
-  //   var estPrice = document.getElementById("uiestimatedPrice");
-  //
-  //   var url =  "http://127.0.0.1:5000/predict";
-  //
-  //   $.post(url,{
-  //     total_sqft: parseFloat(sqft.value),
-  //     Bedroom : Bedroom,
-  //     bath : bathrooms,
-  //     location: location.value
-  //   },function (data,status){
-  //     console.log(data.estimated_price);
-  //     estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + "Lakh</h2>";
-  //     console.log(status)
-  //   })
-  //
-  // }
   // function onClickedEstimatePrice() {
   //   console.log("Estimate price button clicked");
   //
@@ -269,7 +220,6 @@
   //   var Bedroom = getBedroomValue();
   //   var bathrooms = getBathValue();
   //   var location = document.getElementById("answers").value;
-  //   var estPrice = document.getElementById("uiestimatedPrice");
   //
   //   if (!location) {
   //     alert("Please select a location");
@@ -285,13 +235,15 @@
   //     location: location
   //   }, function (data, status) {
   //     console.log(data.estimated_price);
-  //     estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + " Lakh</h2>";
-  //     console.log(status);
+  //
+  //     // Store estimated price in localStorage
+  //     localStorage.setItem("estimated_price", data.estimated_price);
+  //
+  //     // Redirect after storing data
+
   //   }).fail(function () {
   //     console.error("Error: Could not retrieve estimated price.");
   //   });
-  //
-  //   window.location.href = "value.html";
   // }
 
   function onClickedEstimatePrice() {
@@ -302,8 +254,8 @@
     var bathrooms = getBathValue();
     var location = document.getElementById("answers").value;
 
-    if (!location) {
-      alert("Please select a location");
+    if (!location || location === "Choose a location") {
+      alert("Please select a valid location");
       return;
     }
 
@@ -315,13 +267,12 @@
       bath: bathrooms,
       location: location
     }, function (data, status) {
-      console.log(data.estimated_price);
+      console.log("Received estimated price:", data.estimated_price);
 
       // Store estimated price in localStorage
       localStorage.setItem("estimated_price", data.estimated_price);
 
-      // Redirect after storing data
-      window.location.href = "value.html";
+
     }).fail(function () {
       console.error("Error: Could not retrieve estimated price.");
     });
@@ -355,6 +306,10 @@
     });
   }
   window.onload = onPageLoad;
+
+  // Retrieve estimated price from localStorage
+  document.getElementById("predictedValue").textContent =
+          localStorage.getItem("estimated_price") || "No value available";
 
 </script>
 </body>
