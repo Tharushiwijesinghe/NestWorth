@@ -20,7 +20,7 @@ function getBedroomValue() {
 function onClickedEstimatePrice() {
     console.log("Estimate price button clicked");
 
-    var sqft = document.getElementById("area").textContent.replace(" m²", "").trim();
+    var sqft = parseFloat(document.getElementById("area").textContent.replace(" m²", "").trim()) || 0;
     var Bedroom = getBedroomValue();
     var bathrooms = getBathValue();
     var location = document.getElementById("answers").value;
@@ -40,27 +40,12 @@ function onClickedEstimatePrice() {
         return;
     }
 
-    // var url = "http://127.0.0.1:5000/predicted_home_price";
-    //
-    // $.post(url, {
-    //     total_sqft: sqft,
-    //     Bedroom: Bedroom,
-    //     bath: bathrooms,
-    //     location: location
-    // }, function (data, status) {
-    //     console.log("Received estimated price:", data.estimated_price);
-    //
-    //     //update UI with estimated price
-    //     estPrice.innerHTML = "<h2>" + data.estimated_price.toString()+"Lakh</h2>"
-    //
-    //     // Store estimated price in localStorage
-    //     localStorage.setItem("estimated_price", data.estimated_price);
-    //
-    //
-    // }).fail(function () {
-    //     console.error("Error: Could not retrieve estimated price.");
-    //     alert("try again later.");
-    // });
+    console.log("Sending data to server:", {
+        total_sqft: sqft,
+        Bedroom: Bedroom,
+        bath: bathrooms,
+        location: location
+    });
 
     $.ajax({
         url: "http://127.0.0.1:5000/predicted_home_price",
@@ -74,16 +59,14 @@ function onClickedEstimatePrice() {
         }),
         success: function (data) {
             console.log("Received estimated price:", data.estimated_price);
-            estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + " Lakh</h2>";
+            estPrice.textContent = "Predict price: " + data.estimated_price.toString() + " Lakh";
             localStorage.setItem("estimated_price", data.estimated_price);
         },
-        error: function () {
-            console.error("Error: Could not retrieve estimated price.");
+        error: function (xhr, status, error) {
+            console.error("Error: Could not retrieve estimated price.", error);
             alert("Failed to get estimated price. Check server.");
         }
     });
-
-
 }
 
 
