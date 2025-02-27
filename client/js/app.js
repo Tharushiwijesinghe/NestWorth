@@ -2,19 +2,35 @@
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
 //set area
+// function calculateArea() {
+//     const length = document.getElementById('length').value || 0;
+//     const width = document.getElementById('width').value || 0 ;
+//     const area = length * width ;
+//     document.getElementById('area').textContent = `${area} m²`;
+// }
+
 function calculateArea() {
-    const length = document.getElementById('length').value || 0;
-    const width = document.getElementById('width').value || 0 ;
-    const area = length * width ;
-    document.getElementById('area').textContent = `${area} m²`;
+    let length = document.getElementById("length").value;
+    let width = document.getElementById("width").value;
+    let area = length * width || 0;
+    document.getElementById("area").textContent = area + " m²";
 }
+// function getBathValue() {
+//     return parseInt(document.getElementById("bawidth").value) || 0;
+// }
+
+// function getBedroomValue() {
+//     return parseInt(document.getElementById("bwidth").value) || 0;
+// }
+
 function getBathValue() {
-    return parseInt(document.getElementById("bawidth").value) || 0;
+    return parseInt(document.getElementById("bathrooms").value) || 0;
 }
 
 function getBedroomValue() {
-    return parseInt(document.getElementById("bwidth").value) || 0;
+    return parseInt(document.getElementById("bedrooms").value) || 0;
 }
+
 
 //predict price
 function onClickedEstimatePrice() {
@@ -75,33 +91,53 @@ function onPageLoad() {
     console.log("Document loaded, fetching locations...");
     var url = "http://127.0.0.1:5000/get_location_names";
 
+    // $.get(url, function (data, status) {
+    //     console.log("Received data:", data);
+    //     if (data && data.location_names) {  // Corrected key
+    //         var locationSelect = document.getElementById("answers");
+    //         // $('#answers').empty(); // Clear existing options
+    //         locationSelect.innerHTML = " ";
+
+    //         // Add a default option
+    //         // var defaultOption = new Option("Choose a location", "");
+    //         // locationSelect.appendChild(defaultOption);
+
+    //         var defaultOption = document.createElement("option");
+    //         defaultOption.text = "Choose a location";
+    //         defaultOption.value = "";
+    //         defaultOption.disabled = true;
+    //         defaultOption.selected = true;
+    //         locationSelect.appendChild(defaultOption);
+
+    //         // Populate locations
+    //         data.location_names.forEach(location => {
+    //             var opt = new Option(location, location);
+    //             locationSelect.appendChild(opt);
+    //         });
+    //     }
+    // }).fail(function () {
+    //     console.error("Failed to load locations. Check server.");
+    //     alert("Could not load locations. Try again later.");
+    // });
+
     $.get(url, function (data, status) {
-        console.log("Received data:", data);
-        if (data && data.location_names) {  // Corrected key
+        if (data && data.location_names) {
             var locationSelect = document.getElementById("answers");
-            // $('#answers').empty(); // Clear existing options
-            locationSelect.innerHTML = " ";
-
-            // Add a default option
-            // var defaultOption = new Option("Choose a location", "");
-            // locationSelect.appendChild(defaultOption);
-
+            locationSelect.innerHTML = "";
             var defaultOption = document.createElement("option");
             defaultOption.text = "Choose a location";
             defaultOption.value = "";
             defaultOption.disabled = true;
             defaultOption.selected = true;
             locationSelect.appendChild(defaultOption);
-
-            // Populate locations
             data.location_names.forEach(location => {
                 var opt = new Option(location, location);
                 locationSelect.appendChild(opt);
             });
         }
     }).fail(function () {
-        console.error("Failed to load locations. Check server.");
         alert("Could not load locations. Try again later.");
     });
+    
 }
 window.onload = onPageLoad;
