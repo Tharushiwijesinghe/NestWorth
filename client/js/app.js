@@ -15,13 +15,7 @@ function calculateArea() {
     let area = length * width || 0;
     document.getElementById("area").textContent = area + " m²";
 }
-// function getBathValue() {
-//     return parseInt(document.getElementById("bawidth").value) || 0;
-// }
 
-// function getBedroomValue() {
-//     return parseInt(document.getElementById("bwidth").value) || 0;
-// }
 
 function getBathValue() {
     return parseInt(document.getElementById("bathrooms").value) || 0;
@@ -75,7 +69,7 @@ function onClickedEstimatePrice() {
         }),
         success: function (data) {
             console.log("Received estimated price:", data.estimated_price);
-            estPrice.textContent = "Predict price: " + data.estimated_price.toString() + " Lakh";
+            estPrice.textContent = "Predicted price: " + data.estimated_price.toString() + " Lakh";
             localStorage.setItem("estimated_price", data.estimated_price);
         },
         error: function (xhr, status, error) {
@@ -91,34 +85,6 @@ function onPageLoad() {
     console.log("Document loaded, fetching locations...");
     var url = "http://127.0.0.1:5000/get_location_names";
 
-    // $.get(url, function (data, status) {
-    //     console.log("Received data:", data);
-    //     if (data && data.location_names) {  // Corrected key
-    //         var locationSelect = document.getElementById("answers");
-    //         // $('#answers').empty(); // Clear existing options
-    //         locationSelect.innerHTML = " ";
-
-    //         // Add a default option
-    //         // var defaultOption = new Option("Choose a location", "");
-    //         // locationSelect.appendChild(defaultOption);
-
-    //         var defaultOption = document.createElement("option");
-    //         defaultOption.text = "Choose a location";
-    //         defaultOption.value = "";
-    //         defaultOption.disabled = true;
-    //         defaultOption.selected = true;
-    //         locationSelect.appendChild(defaultOption);
-
-    //         // Populate locations
-    //         data.location_names.forEach(location => {
-    //             var opt = new Option(location, location);
-    //             locationSelect.appendChild(opt);
-    //         });
-    //     }
-    // }).fail(function () {
-    //     console.error("Failed to load locations. Check server.");
-    //     alert("Could not load locations. Try again later.");
-    // });
 
     $.get(url, function (data, status) {
         if (data && data.location_names) {
