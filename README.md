@@ -3,16 +3,16 @@
 # NestWorth 🏡💰
 A Machine Learning-powered Housing Price Prediction System
 
-##📌 Overview
+📌 Overview
 NestWorth is a web-based housing price prediction system that leverages Machine Learning to estimate home prices based on various factors. It provides users with an easy-to-use interface to predict prices using real estate data from Bengaluru.
 
-##🚀 Features
+🚀 Features
 Predict house prices based on input parameters.
 Machine Learning model integration using a trained model in Python.
 Flask backend for handling predictions and API requests.
 HTML, CSS, JavaScript frontend for a user-friendly experience.
 
-##🏗️ Project Structure
+🏗️ Project Structure
 
 ```plaintext
 NestWorth/
